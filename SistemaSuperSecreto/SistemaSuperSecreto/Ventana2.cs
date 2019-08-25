@@ -16,5 +16,36 @@ namespace SistemaSuperSecreto
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            int conteo = 0;
+            string seleccion;
+
+            if (chkC.Checked == true)
+            {
+                conteo++;
+            }
+            if (chkBasic.Checked== true)
+            {
+                conteo++;
+            }
+            if (rbTarjeta.Checked==true)
+            {
+                seleccion = "Tarjeta de Crédito";
+            }
+            else
+            {
+                seleccion = "PayPal";
+            }
+            MessageBox.Show("Ha seleccionado " + conteo + " cursos y su método de pago es mediante " + seleccion);
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+           this.Hide();
+           Form1 formulario = new Form1();
+           formulario.Visible = true;
+        }
     }
 }

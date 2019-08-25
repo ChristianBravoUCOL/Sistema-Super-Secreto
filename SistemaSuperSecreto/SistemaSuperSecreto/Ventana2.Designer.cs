@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.chkC = new System.Windows.Forms.CheckBox();
+            this.chkBasic = new System.Windows.Forms.CheckBox();
+            this.rbTarjeta = new System.Windows.Forms.RadioButton();
+            this.rbPay = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -58,47 +58,47 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Formas de Pago";
             // 
-            // checkBox1
+            // chkC
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 133);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(71, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Visual C#";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkC.AutoSize = true;
+            this.chkC.Location = new System.Drawing.Point(16, 133);
+            this.chkC.Name = "chkC";
+            this.chkC.Size = new System.Drawing.Size(71, 17);
+            this.chkC.TabIndex = 2;
+            this.chkC.Text = "Visual C#";
+            this.chkC.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkBasic
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(16, 178);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(83, 17);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Text = "Visual Basic";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkBasic.AutoSize = true;
+            this.chkBasic.Location = new System.Drawing.Point(16, 178);
+            this.chkBasic.Name = "chkBasic";
+            this.chkBasic.Size = new System.Drawing.Size(83, 17);
+            this.chkBasic.TabIndex = 3;
+            this.chkBasic.Text = "Visual Basic";
+            this.chkBasic.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbTarjeta
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(320, 133);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(109, 17);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tarjeta de Crédito";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbTarjeta.AutoSize = true;
+            this.rbTarjeta.Location = new System.Drawing.Point(320, 133);
+            this.rbTarjeta.Name = "rbTarjeta";
+            this.rbTarjeta.Size = new System.Drawing.Size(109, 17);
+            this.rbTarjeta.TabIndex = 4;
+            this.rbTarjeta.TabStop = true;
+            this.rbTarjeta.Text = "Tarjeta de Crédito";
+            this.rbTarjeta.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbPay
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(320, 178);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(57, 17);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Paypal";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbPay.AutoSize = true;
+            this.rbPay.Location = new System.Drawing.Point(320, 178);
+            this.rbPay.Name = "rbPay";
+            this.rbPay.Size = new System.Drawing.Size(57, 17);
+            this.rbPay.TabIndex = 5;
+            this.rbPay.TabStop = true;
+            this.rbPay.Text = "Paypal";
+            this.rbPay.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -108,6 +108,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "&Comprar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -117,6 +118,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "C&errar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Ventana2
             // 
@@ -125,10 +127,10 @@
             this.ClientSize = new System.Drawing.Size(474, 398);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.rbPay);
+            this.Controls.Add(this.rbTarjeta);
+            this.Controls.Add(this.chkBasic);
+            this.Controls.Add(this.chkC);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Ventana2";
@@ -142,10 +144,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.CheckBox chkC;
+        private System.Windows.Forms.CheckBox chkBasic;
+        private System.Windows.Forms.RadioButton rbTarjeta;
+        private System.Windows.Forms.RadioButton rbPay;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }
